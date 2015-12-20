@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'app\assets\FoundationAsset',
+        //'yii\bootstrap\BootstrapAsset',
     ];
 }
