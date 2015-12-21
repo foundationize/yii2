@@ -37,7 +37,21 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => require(__DIR__ . '/db.php'),           
+        // http://www.yiiframework.com/doc-2.0/guide-runtime-routing.html#using-pretty-urls
+        // http://www.joshuawinn.com/yii-clean-seo-friendly-urls-for-pages/
+        // Make sure mod_rewrite enabled: http://askubuntu.com/questions/48362/how-to-enable-mod-rewrite-in-apache
+        'urlManager' => [
+            'hostInfo' => 'http://yii2.foundationize.com', //returned by Url::home(true)            
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,                        
+            'rules' => [                                                
+                'contact' => 'site/contact',
+                // insert your page routes here
+            ],
+        ],  
+        
+        
     ],
     'params' => $params,
 ];
