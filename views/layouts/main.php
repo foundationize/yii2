@@ -28,34 +28,14 @@ AppAsset::register($this);
 
         <div class="row">
           <div class="large-12 columns">
-            <h1>Foundationize - Welcome to Foundation for Sites 6</h1>
-            
-            <hr>
-            This is header div
+            <h1>Welcome to Yii2 with Foundation 6</h1>            
           </div>
         </div>
         
         <?= $content ?>
     
     
-    
-        <div class="row">
-            <div class="columns large-3">
-                
-            </div>
-            
-            <div class="columns large-3">
-                
-            </div>
-            
-            <div class="columns large-3">
-                
-            </div>
-            
-            <div class="columns large-3">
-                &copy; Foundationize built with <3 by twoggle <?= date('Y') ?>
-            </div>
-        </div>
+    <!-- here goes footer code -->
                         
 <?php $this->endBody() ?>
 </body>
