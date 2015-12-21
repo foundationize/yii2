@@ -12,6 +12,8 @@ $this->title = 'Demo: Yii2 + Foundation | foundationize.com';
           
           <p>This website is a demo of the <a target="_blank" href="http://www.yiiframework.com/doc-2.0/guide-index.html">Yii2 PHP framework</a>, pre-configured with <a href="http://foundation.zurb.com/" target="_blank">Foundation 6</a>. To get started with your own foundationized Yii2 project, please see the <a href="http://foundationize.com/#yii2">Yii2 + Foundation installation instructions</a>.</p>
           
+          <p>No need to install and configure extensions, this version of Yii2 is pre-configured and ready to roll with Foundation.</p>
+          
           <p>Once you've exhausted the fun in this document, you should check out:</p>
           
           <div class="row">
