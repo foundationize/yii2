@@ -51,6 +51,12 @@ $config = [
             ],
         ],  
         
+        // Specify alias shortcuts here
+        // These paths are relative to '/web'
+        // note: trailing slashes are removed automatically (by Yii)
+//        'aliases' => [
+//            '@uploadsdir' => '/uploads'
+//        ],
         
     ],
     'params' => $params,
