@@ -16,7 +16,7 @@
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.5",
-        "zurb/foundation": "*",
+        
         "yiisoft/yii2-swiftmailer": "*"
     },
     "require-dev": {
