@@ -19,9 +19,15 @@ AppAsset::register($this);
         <meta charset="<?= Yii::$app->charset ?>">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <?= Html::csrfMetaTags() ?>
-                        
-        <?php $title = $this->title . ' | ' . Yii::getAlias('@site_name') . ' - foundationize.com'; ?>
+        <?= Html::csrfMetaTags() ?>                
+        <?php 
+        $title = '';
+        if (app\models\Utils::isHome()) {
+            $title = $this->title . ' - foundationize.com';
+        } else {
+            $title = $this->title . ' | ' . Yii::getAlias('@site_name') . ' - foundationize.com';
+        }
+        ?>                
         <title><?= Html::encode($title) ?></title>
         
         <?php $this->head() ?>
