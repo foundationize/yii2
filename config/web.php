@@ -51,14 +51,16 @@ $config = [
             ],
         ],  
         
-        // Specify alias shortcuts here
-        // These paths are relative to '/web'
-        // note: trailing slashes are removed automatically (by Yii)
-//        'aliases' => [
-//            '@uploadsdir' => '/uploads'
-//        ],
-        
-    ],
+    ],    
+    'aliases' => [
+            // Site-wide var's
+            '@site_name' =>  'Demo: Yii2 + Foundation',
+            '@site_tagline' => 'Start your new project using Yii2 with Foundation 6',
+            // Paths    
+            // These paths are relative to '/web'
+            // note: trailing slashes are removed automatically (by Yii)
+            //'@uploadsdir' => '/uploads'
+        ],    
     'params' => $params,
 ];
 

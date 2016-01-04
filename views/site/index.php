@@ -1,8 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-
-$this->title = 'Demo: Yii2 + Foundation | foundationize.com';
+$this->title = Yii::getAlias('@site_name') . ' | ' . Yii::getAlias('@site_tagline');
 ?>
 
 <div class="row">
@@ -27,8 +26,7 @@ $this->title = 'Demo: Yii2 + Foundation | foundationize.com';
               
             <div class="large-4 medium-4 columns">
               <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-              
+            </div>              
           </div>
           
           <div class="row">

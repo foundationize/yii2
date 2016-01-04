@@ -20,7 +20,10 @@ AppAsset::register($this);
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
+                        
+        <?php $title = $this->title . ' | ' . Yii::getAlias('@site_name') . ' - foundationize.com'; ?>
+        <title><?= Html::encode($title) ?></title>
+        
         <?php $this->head() ?>
     </head>
     
@@ -28,7 +31,7 @@ AppAsset::register($this);
 
         <div class="row">
           <div class="large-12 columns">
-            <h1>Welcome to Yii2 with Foundation 6</h1>            
+            <h1><?= Yii::getAlias('@site_name'); ?></h1>            
           </div>
         </div>
         
