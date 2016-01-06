@@ -37,14 +37,6 @@ AppAsset::register($this);
         <header class="hide-for-small-down">
             <div class="row">
                 <div class="columns large-12 medium-12">
-                    
-                   <!-- <nav role="navigation">
-                        <ul>
-                            <li><?= Yii::getAlias('@site_name'); ?></li>                            
-                            
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>                        
-                    </nav>-->
                                         
                    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
                        <button class="menu-icon" type="button" data-toggle></button>
@@ -89,8 +81,14 @@ AppAsset::register($this);
         </header>
         
         
+        <div id="content" class="row">
+            <div class="columns large-12">
+
+                <?= $content ?>
+
+            </div>
+        </div>
         
-        <?= $content ?>
     
     
     <!-- here goes footer code -->

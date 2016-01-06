@@ -5,13 +5,14 @@
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use foundationize\foundation\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact us';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
+    
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
@@ -40,7 +41,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="row">
             <div class="large-5 columns">
-
+                
+                <?php // see http://foundation.zurb.com/sites/docs/forms.html ?>
+                
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
                     <?= $form->field($model, 'name') ?>
@@ -56,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]) ?>
 
                     <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?= Html::submitButton('Submit', ['class' => 'small button', 'name' => 'contact-button']) ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>
