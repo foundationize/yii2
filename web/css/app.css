@@ -1,0 +1,15 @@
+/*
+CSS app styles
+*/
+
+#example-menu {
+    background-color: #333;
+}
+
+#example-menu .top-bar-left ul, #example-menu .top-bar-right ul {
+    background-color: #333;
+}
+
+#example-menu #site-title {
+    color: #fff;
+}

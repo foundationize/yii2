@@ -7,7 +7,7 @@ $this->title = Yii::getAlias('@site_name') . ' | ' . Yii::getAlias('@site_taglin
 <div class="row">
       <div class="large-12 columns">
         <div class="callout large">
-          <h3>Yii2, Foundationized!</h3>
+<!--          <h3>Yii2, Foundationized!</h3>-->
           
           <p>This website is a demo of the <a target="_blank" href="http://www.yiiframework.com/doc-2.0/guide-index.html">Yii2 PHP framework</a>, pre-configured with <a href="http://foundation.zurb.com/" target="_blank">Foundation 6</a>. To get started with your own foundationized Yii2 project, please see the <a href="http://foundationize.com/#yii2">Yii2 + Foundation installation instructions</a>.</p>
           

@@ -34,12 +34,61 @@ AppAsset::register($this);
     </head>
     
     <body>
+        <header class="hide-for-small-down">
+            <div class="row">
+                <div class="columns large-12 medium-12">
+                    
+                   <!-- <nav role="navigation">
+                        <ul>
+                            <li><?= Yii::getAlias('@site_name'); ?></li>                            
+                            
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>                        
+                    </nav>-->
+                                        
+                   <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+                       <button class="menu-icon" type="button" data-toggle></button>
+                       <div class="title-bar-title"><?= Yii::getAlias('@site_name'); ?></div>
+                   </div>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <h1><?= Yii::getAlias('@site_name'); ?></h1>            
-          </div>
-        </div>
+                   <div class="top-bar" id="example-menu">
+                       <div class="top-bar-left">
+                           <ul class="dropdown menu" data-dropdown-menu>
+                               <li id="site-title" class="menu-text">
+                                   <a href="<?= Yii::$app->homeUrl; ?>">
+                                        <?= Yii::getAlias('@site_name'); ?>
+                                   </a>
+                               </li>
+                               
+                               <li class="has-submenu">
+                                   <a href="#">One</a>
+                                   <ul class="submenu menu vertical" data-submenu>
+                                       <li><a href="#one">One</a></li>
+                                       <li><a href="#two">Two</a></li>
+                                       <li><a href="#three">Three</a></li>                                       
+                                   </ul>
+                               </li>
+                               <li><a href="#">Two</a></li>
+                               <li><a href="#">Three</a></li>
+                               <li><a href="/contact">Contact</a></li>
+                           </ul>
+                       </div>
+                       <div class="top-bar-right">
+                           <ul class="menu">
+                               <li><input type="search" placeholder="Search"></li>
+                               <li><button type="button" class="button">Search</button></li>
+                           </ul>
+                       </div>
+                   </div>
+                    
+                  
+                </div>
+            </div>
+                       
+                     
+        </header>
+        
+        
         
         <?= $content ?>
     
