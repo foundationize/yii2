@@ -4,6 +4,7 @@
  */
 namespace app\models;
 
+use Yii;
 
 class Utils {
     
@@ -31,6 +32,27 @@ class Utils {
         $home2 = self::getCurrentURL();
                                 
         return (($home1 == $home2) || ( strpos($home2, 'site/index') !== false));
+    }
+    
+    // http://php.net/manual/en/function.mail.php
+    public static function sendMail($subject, $message, $to = '{admin}',  $fromName = '', $fromMail = '') 
+    {        
+        if ($to == '{admin}') {
+            $to = Yii::$app->params['adminEmail'];
+        }
+        
+        if ($fromName == '') {
+            $fromName = Yii::getAlias('@site_name');
+        }
+        if ($fromMail == '') {
+            $fromMail = Yii::$app->params['adminEmail'];
+        }
+                
+        $headers = 'From: ' . $fromName . "\r\n" .
+        'Reply-To: ' . $fromMail . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+        
+        return mail($to, $subject, $message, $headers);
     }
     
 }
