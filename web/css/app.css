@@ -2,6 +2,10 @@
 CSS app styles
 */
 
+header .columns {
+    padding: 0;
+}
+
 #example-menu {
     background-color: #333;
 }
