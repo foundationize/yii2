@@ -50,7 +50,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php //$form->enableAjaxValidation = true; ?>
                 
                     <?= $form->field($model, 'name') ?>
-
+                    
+                    <?php /*
+                
                     <?= $form->field($model, 'email') ?>
 
                     <?= $form->field($model, 'subject') ?>
@@ -60,6 +62,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="large-3 columns">{image}</div><div class="large-6 columns">{input}</div></div>',
                     ]) ?>
+                    */
+                    ?>
 
                     <div class="form-group">
                         <?= Html::submitButton('Submit', ['class' => 'small button', 'name' => 'contact-button']) ?>

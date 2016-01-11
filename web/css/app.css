@@ -21,3 +21,15 @@ header .columns {
 #example-menu #site-title {
     color: #fff;
 }
+
+
+/* Error & Success Styles */
+label.error, .error-box.error {
+    color: #ec5840;
+}
+
+input.error:not(:focus) {
+    background-color: rgba(236, 88, 64, 0.1);
+    border-color: #ec5840;
+}
+
