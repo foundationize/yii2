@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     
                     <?php //$form->enableAjaxValidation = true; ?>
                 
-                    <?= $form->field($model, 'name') ?>
+                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'First name'])->hint('Please enter only first name here. Minimum 2 characters.'); ?>
                     
                     <?php /*
                 
