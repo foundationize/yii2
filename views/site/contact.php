@@ -5,7 +5,8 @@
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
-use foundationize\foundation\ActiveForm;
+use foundationize\foundation\FnActiveForm;
+//use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact us';
@@ -43,9 +44,11 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="large-5 columns">
                 
                 <?php // see http://foundation.zurb.com/sites/docs/forms.html ?>
+                                                
+                <?php $form = FnActiveForm::begin(['id' => 'contact-form' /*, 'options'=>['data-abide'=>true]]*/ ] ); ?>
+                    
+                    <?php //$form->enableAjaxValidation = true; ?>
                 
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
                     <?= $form->field($model, 'name') ?>
 
                     <?= $form->field($model, 'email') ?>
@@ -62,7 +65,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= Html::submitButton('Submit', ['class' => 'small button', 'name' => 'contact-button']) ?>
                     </div>
 
-                <?php ActiveForm::end(); ?>
+                <?php FnActiveForm::end(); ?>
 
             </div>
         </div>
