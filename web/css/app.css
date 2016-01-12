@@ -25,6 +25,11 @@ input.error:not(:focus) {
     border-color: #ec5840;
 }
 
+/* Header full width */
+header .row {
+    width: 100%;
+    max-width: 100%;
+}
 header .columns {
     padding: 0;
 }

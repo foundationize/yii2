@@ -35,7 +35,7 @@ AppAsset::register($this);
     
     <body>
         <header class="hide-for-small-down">
-            <div class="row">
+            <div class="row full-width">
                 <div class="columns large-12 medium-12">
                                         
                    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
