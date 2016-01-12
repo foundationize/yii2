@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
+/* @var $form foundationize\foundation\FnActiveForm */
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
@@ -53,14 +53,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     /*, 'options'=>['data-abide'=>true]]*/ ] ); ?>
                     
                     <?php // http://www.yiiframework.com/doc-2.0/guide-input-validation.html#ajax-validation ?>
-                    <?= $form->field($model, 'name', ['enableAjaxValidation' => true])->textInput(['placeholder'=>'First name'])->label('Name')->hint('Please enter only first name here. Minimum 2 characters.'); ?>
-                    
-                                    
+                    <?= $form->field($model, 'name', ['enableAjaxValidation' => true])
+                            ->textInput(['placeholder'=>'Name (ajaxValidated, voila!)'])->label('Name')->hint('Please enter only first name here. Minimum 2 characters (try entering only 1).'); ?>
+                                                        
                     <!-- Conditional validation: if they want to be called back, must provide phone number -->
-                                   
+                                        
+                    <?= $form->field($model, 'callme')->checkbox(['selected' => true])                            
+                            ->hint('If you would like to get a call from us, please leave your phone number.') ?>
                     
-                    
-                    <?php /*
+                    <?= $form->field($model, 'phone_no')
+                            ->textInput(['placeholder'=>'(Conditionally validated based on checkbox above, groovy!)'])
+                            ->hint('Integers only (we know we know, you can have +s and things normally! <a target="_blank" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> for now, hmmkay?)') ?>                    
                         
                     <?= $form->field($model, 'email') ?>
 
@@ -70,8 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="large-3 columns">{image}</div><div class="large-6 columns">{input}</div></div>',
-                    ]) ?>
-                    */
+                    ]) 
                     ?>
 
                     <div class="form-group">
@@ -84,4 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
     <?php endif; ?>
+        
+        <br>
+        
 </div>

@@ -15,6 +15,9 @@ class ContactForm extends Model
     public $subject;
     public $body;
     public $verifyCode;
+    // Custom (optional)
+    public $callme; // bool
+    public $phone_no; // int
 
     /**
      * @return array the validation rules.
@@ -27,18 +30,30 @@ class ContactForm extends Model
             
             ['name', 'validateName'],
             
+            // http://www.yiiframework.com/doc-2.0/guide-input-validation.html#conditional-validation
+            ['phone_no', 'required', 'when' => function ($model) {
+                return ($model->callme == true);
+                },
+                'whenClient' => "function (attribute, value) {
+                    return $('#contactform-callme').is(':checked') === true;
+                 }"
+            ],
+            
+            ['phone_no', 'integer'],
+                        
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
+            // Careful on ajax-enabled forms, captcha fails because model already validated at ajax check (which regenerates captcha):
+            // http://stackoverflow.com/questions/26923230/why-yii2-captcha-cant-through-the-verification-on-the-client-side
+            // https://github.com/yiisoft/yii2/issues/6115#issuecomment-63956403
             ['verifyCode', 'captcha'],
         ];
     }
     
     // http://www.yiiframework.com/doc-2.0/guide-input-validation.html#creating-validators
     public function validateName($attribute, $params)
-    {
-        Yii::info("DBG: name={$this->$attribute}");
-        
+    {   
         if (strlen(trim($this->$attribute)) < 2) {
             $this->addError($attribute, 'Name must be at least 2 characters long. Sorry if your name consists of only one character!');
         }
@@ -50,6 +65,7 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
+            'callme' => 'Please give me a call',
             'verifyCode' => 'Verification Code',
         ];
     }
@@ -61,7 +77,7 @@ class ContactForm extends Model
      */
     public function contact($email)
     {
-        if ($this->validate()) {
+        //if ($this->validate()) {
 //            Yii::$app->mailer->compose()
 //                ->setTo($email)
 //                ->setFrom([$this->email => $this->name])
@@ -73,7 +89,7 @@ class ContactForm extends Model
             
             return Utils::sendMail($this->subject, $this->body, '{admin}', $this->name, $this->email);
             
-        }
-        return false;
+//        }
+//        return false;
     }
 }
