@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use foundationize\foundation\FnActiveForm;
 
 class SiteController extends Controller
 {
@@ -77,6 +78,12 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
+        
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return FnActiveForm::validate($model);
+        }
+        
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 

@@ -24,13 +24,26 @@ class ContactForm extends Model
         return [
             // name, email, subject and body are required
             [['name', 'email', 'subject', 'body'], 'required'],
+            
+            ['name', 'validateName'],
+            
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
             ['verifyCode', 'captcha'],
         ];
     }
-
+    
+    // http://www.yiiframework.com/doc-2.0/guide-input-validation.html#creating-validators
+    public function validateName($attribute, $params)
+    {
+        Yii::info("DBG: name={$this->$attribute}");
+        
+        if (strlen(trim($this->$attribute)) < 2) {
+            $this->addError($attribute, 'Name must be at least 2 characters long. Sorry if your name consists of only one character!');
+        }
+    }
+    
     /**
      * @return array customized attribute labels
      */

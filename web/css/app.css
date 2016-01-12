@@ -2,6 +2,29 @@
 CSS app styles
 */
 
+/*form small {
+    margin-top: -0.5rem;
+}*/
+
+[type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"], [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
+    margin-bottom: 0.5rem;
+}
+    
+p.help-text {
+    margin-top: 0.5rem;
+}
+
+
+/* Error & Success Styles */
+label.error, .error-box.error {
+    color: #ec5840;
+}
+
+input.error:not(:focus) {
+    background-color: rgba(236, 88, 64, 0.1);
+    border-color: #ec5840;
+}
+
 header .columns {
     padding: 0;
 }
@@ -23,13 +46,4 @@ header .columns {
 }
 
 
-/* Error & Success Styles */
-label.error, .error-box.error {
-    color: #ec5840;
-}
-
-input.error:not(:focus) {
-    background-color: rgba(236, 88, 64, 0.1);
-    border-color: #ec5840;
-}
 

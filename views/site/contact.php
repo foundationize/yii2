@@ -43,16 +43,25 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="large-5 columns">
                 
-                <?php // see http://foundation.zurb.com/sites/docs/forms.html ?>
+                <?php // Forms: 
+                // http://foundation.zurb.com/sites/docs/forms.html 
+                // http://www.yiiframework.com/doc-2.0/guide-input-forms.html
+                // http://www.yiiframework.com/doc-2.0/guide-input-validation.html                
+                ?>
                                                 
-                <?php $form = FnActiveForm::begin(['id' => 'contact-form' /*, 'options'=>['data-abide'=>true]]*/ ] ); ?>
+                <?php $form = FnActiveForm::begin(['id' => 'contact-form',                    
+                    /*, 'options'=>['data-abide'=>true]]*/ ] ); ?>
                     
-                    <?php //$form->enableAjaxValidation = true; ?>
-                
-                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'First name'])->hint('Please enter only first name here. Minimum 2 characters.'); ?>
+                    <?php // http://www.yiiframework.com/doc-2.0/guide-input-validation.html#ajax-validation ?>
+                    <?= $form->field($model, 'name', ['enableAjaxValidation' => true])->textInput(['placeholder'=>'First name'])->label('Name')->hint('Please enter only first name here. Minimum 2 characters.'); ?>
+                    
+                                    
+                    <!-- Conditional validation: if they want to be called back, must provide phone number -->
+                                   
+                    
                     
                     <?php /*
-                
+                        
                     <?= $form->field($model, 'email') ?>
 
                     <?= $form->field($model, 'subject') ?>
