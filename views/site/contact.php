@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- Conditional validation: if they want to be called back, must provide phone number -->
                                         
                     <?= $form->field($model, 'callme')->checkbox(['selected' => true])                            
-                            ->hint('If you would like to get a call from us, please leave your phone number.') ?>
+                            ->hint('If you would like to receive a call from us, tick this box.') ?>
                     
                     <?= $form->field($model, 'phone_no')
                             ->textInput(['placeholder'=>'(Conditionally validated based on checkbox above, groovy!)'])
