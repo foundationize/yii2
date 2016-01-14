@@ -39,8 +39,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php else: ?>
 
         <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
+            If you have business inquiries or other questions/suggestions, please fill out the following form to contact us.            
+        </p>
+        
+        <p>
+            For any queries / suggestions regarding the Foundationized Yii2 demo, please send through your query below too.
         </p>
 
         <div class="row">
@@ -69,7 +72,16 @@ $this->params['breadcrumbs'][] = $this->title;
                             ->hint('Integers only (we know we know, you can have ()s and things usually! <a target="_blank" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> for now, hmmkay?)') ?>                    
                         
                     <?= $form->field($model, 'email') ?>
-
+                    
+                    <?php
+                    // ->dropDownList is method of ActiveField (not FnActiveField)
+                    $query_types = ['question' => 'I have a question',
+                                    'suggestion' => 'I would like to suggest something',
+                                    'praise' => 'I would like to shower you with praise',
+                        ];
+                    ?>
+                    <?= $form->field($model, 'query_type')->dropDownList($query_types, ['prompt' => 'Select query type']) ?>
+                    
                     <?= $form->field($model, 'subject') ?>
 
                     <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>

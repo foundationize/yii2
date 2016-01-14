@@ -18,7 +18,8 @@ class ContactForm extends Model
     // Custom (optional)
     public $callme; // bool
     public $phone_no; // int
-
+    public $query_type;
+    
     /**
      * @return array the validation rules.
      */
