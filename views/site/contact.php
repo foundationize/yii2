@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     
                     <?php // http://www.yiiframework.com/doc-2.0/guide-input-validation.html#ajax-validation ?>
                     <?= $form->field($model, 'name', ['enableAjaxValidation' => true])
-                            ->textInput(['placeholder'=>'Name (ajaxValidated, voila!)'])->label('Name')->hint('Please enter only first name here. Minimum 2 characters (try entering only 1).'); ?>
+                            ->textInput(['placeholder'=>'Name (ajaxValidated, voila!)'])->label('Name')->hint('Please enter first name. Minimum 2 characters (try entering only 1).'); ?>
                                                         
                     <!-- Conditional validation: if they want to be called back, must provide phone number -->
                                         
@@ -69,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     
                     <?= $form->field($model, 'phone_no', ['options' =>['class' => 'form-group hide']])
                             ->textInput(['placeholder'=>'(Conditionally validated based on checkbox above, groovy!)'])
-                            ->hint('Integers only (we know we know, you can have ()s and things usually! <a target="_blank" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> for now, hmmkay?)') ?>                    
+                            ->hint('Integers only (we know we know, you can have ()s and things usually in phone numbers.. <a target="_blank" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> for now, hmmkay?)') ?>                    
                         
                     <?= $form->field($model, 'email') ?>
                     
