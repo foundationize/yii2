@@ -9,6 +9,9 @@ use foundationize\foundation\FnActiveForm;
 //use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
+// Load JS
+$this->registerJsFile('@web/js/contact.js', ['depends'=>'yii\web\JqueryAsset']);
+
 $this->title = 'Contact us';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -59,11 +62,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- Conditional validation: if they want to be called back, must provide phone number -->
                                         
                     <?= $form->field($model, 'callme')->checkbox(['selected' => true])                            
-                            ->hint('If you would like to receive a call from us, tick this box.') ?>
+                            ->hint('If you would like to receive a call from us, tick this box (reveals more form field goodness below).') ?>
                     
-                    <?= $form->field($model, 'phone_no')
+                    <?= $form->field($model, 'phone_no', ['options' =>['class' => 'form-group hide']])
                             ->textInput(['placeholder'=>'(Conditionally validated based on checkbox above, groovy!)'])
-                            ->hint('Integers only (we know we know, you can have +s and things normally! <a target="_blank" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> for now, hmmkay?)') ?>                    
+                            ->hint('Integers only (we know we know, you can have ()s and things usually! <a target="_blank" href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> for now, hmmkay?)') ?>                    
                         
                     <?= $form->field($model, 'email') ?>
 

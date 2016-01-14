@@ -27,4 +27,7 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'foundationize\foundation\FoundationAsset', // in with the new        
     ];
+//    public $jsOptions = array(
+//        'position' => \yii\web\View::POS_HEAD
+//    );
 }
