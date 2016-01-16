@@ -6,6 +6,15 @@ CSS app styles
     margin-top: -0.5rem;
 }*/
 
+/* https://css-tricks.com/box-sizing/ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+ul {
+    list-style: outside none none;
+}
+
 [type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"], [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
     margin-bottom: 0.5rem;
 }
@@ -25,7 +34,7 @@ input.error:not(:focus) {
     border-color: #ec5840;
 }
 
-/* Header full width */
+/*** Header ***/
 header .row {
     width: 100%;
     max-width: 100%;
@@ -51,4 +60,24 @@ header .columns {
 }
 
 
+/*** Footer ***/
 
+footer {
+    color: #ccc;
+    background-color: #333;
+    padding: 2em;
+}
+
+footer a {
+    color: #ccc; 
+}
+
+footer hr.footer-divider {
+    color: #999999;
+    border-color: #999999;
+}
+
+/*footer #social-list {
+    width: 50%;
+    margin: 0 auto;
+}*/

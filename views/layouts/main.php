@@ -92,7 +92,71 @@ AppAsset::register($this);
     
     
     <!-- here goes footer code -->
-                        
+    <footer class="text-center">
+        <div class="row" id="footer-nav">
+            <div class="columns large-3 medium-3">
+                <h4>Footer nav area 1</h4>
+                <ul>
+                    <li><a href="/">Nav link 1</a></li>
+                    <li><a href="/">Nav link 2</a></li>
+                    <li><a href="/">Nav link 3</a></li>
+                </ul>
+            </div>
+                
+            <div class="columns large-3 medium-3">
+                <h4>Footer nav area 1</h4>
+                <ul>
+                    <li><a href="/">Nav link 1</a></li>
+                    <li><a href="/">Nav link 2</a></li>
+                    <li><a href="/">Nav link 3</a></li>
+                </ul>
+            </div>
+            
+            <div class="columns large-3 medium-3">
+                <h4>Footer nav area 1</h4>
+                <ul>
+                    <li><a href="/">Nav link 1</a></li>
+                    <li><a href="/">Nav link 2</a></li>
+                    <li><a href="/">Nav link 3</a></li>
+                </ul>
+            </div>
+            
+            <div class="columns large-3 medium-3">
+                <h4>Footer nav area 1</h4>
+                <ul>
+                    <li><a href="/">Nav link 1</a></li>
+                    <li><a href="/">Nav link 2</a></li>
+                    <li><a href="/">Nav link 3</a></li>
+                </ul>
+            </div>
+            
+        </div>        
+        
+        <hr class="footer-divider">
+        
+        <div class="row" id="footer-social-company">                       
+            <div class="columns large-4 medium-4 large-centered small-centered"> 
+                <!-- how to center align the following ul? -->
+                <ul class="menu simple" id="social-list">
+                    <li><a href="#">twitter</a></li>
+                    <li><a href="#">google+</a></li>
+                    <li>
+                        facebook
+<!--                      todo:  http://chipcullen.com/how-to-use-icomoon-and-icon-fonts-part-1-basic-usage/ -->
+<!--                        <a class=" facebook" target="_blank" href="https://www.facebook.com/foundationize">
+                            <i class="icon-facebook"></i> 
+                        </a>-->
+                    </li>
+                    <li><a href="#">linkedin</a></li>                    
+                </ul>
+                
+                <div class="" id="company">© My Company</div>
+            </div>
+        </div>                 
+        
+    </footer>  
+    
+    
 <?php $this->endBody() ?>
 </body>
 </html>
