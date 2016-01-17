@@ -141,7 +141,7 @@ AppAsset::register($this);
                     <li><a href="#">twitter</a></li>
                     <li><a href="#">google+</a></li>
                     <li>
-                        facebook
+                        /facebook
 <!--                      todo:  http://chipcullen.com/how-to-use-icomoon-and-icon-fonts-part-1-basic-usage/ -->
 <!--                        <a class=" facebook" target="_blank" href="https://www.facebook.com/foundationize">
                             <i class="icon-facebook"></i> 
