@@ -155,7 +155,7 @@ AppAsset::register($this);
                     </div>
                     <div class="columns large-3 medium-3">
                         <a class="linkedin" target="_blank" href="http://linkedin.com">
-                            <i class="icon-linkedin"> </i>
+                            <i class="icon-linkedin2"> </i>
                         </a>
                     </div>
                 </div>
