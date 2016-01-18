@@ -135,22 +135,39 @@ AppAsset::register($this);
         <hr class="footer-divider">
         
         <div class="row" id="footer-social-company">                       
-            <div class="columns large-4 medium-4 large-centered small-centered"> 
-                <!-- how to center align the following ul? -->
-                <ul class="menu simple" id="social-list">
-                    <li><a href="#">twitter</a></li>
-                    <li><a href="#">google+</a></li>
-                    <li>
-                        /facebook
-<!--                      todo:  http://chipcullen.com/how-to-use-icomoon-and-icon-fonts-part-1-basic-usage/ -->
-<!--                        <a class=" facebook" target="_blank" href="https://www.facebook.com/foundationize">
-                            <i class="icon-facebook"></i> 
-                        </a>-->
-                    </li>
-                    <li><a href="#">linkedin</a></li>                    
-                </ul>
+            <div class="columns large-4 medium-4 large-centered small-centered">
                 
-                <div class="" id="company">© My Company</div>
+                <div class="row">
+                    <div class="columns large-3 medium-3">
+                        <a class="facebook" target="_blank" href="https://facebook.com/foundationize">
+                            <i class="icon-facebook"> </i> 
+                        </a>
+                    </div>
+                    <div class="columns large-3 medium-3">
+                        <a class="twitter" target="_blank" href="https://twitter.com/foundationize">
+                            <i class="icon-twitter"> </i> 
+                        </a>
+                    </div>
+                    <div class="columns large-3 medium-3">
+                        <a class="google" target="_blank" href="https://plus.google.com/105150009262920559194">
+                            <i class="icon-google-plus"> </i>
+                        </a>
+                    </div>
+                    <div class="columns large-3 medium-3">
+                        <a class="linkedin" target="_blank" href="http://linkedin.com">
+                            <i class="icon-linkedin"> </i>
+                        </a>
+                    </div>
+                </div>
+                
+                <br>
+                
+                <div class="row">
+                    <div class="columns large-12">
+                        <span id="company">© My Company</span>
+                    </div>
+                </div>
+                                
             </div>
         </div>                 
         

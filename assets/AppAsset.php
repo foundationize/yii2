@@ -20,6 +20,11 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/app.css',
+        'css/icomoon.css',
+        'css/fonts/icomoon.eot',
+        'css/fonts/icomoon.svg',
+        'css/fonts/icomoon.ttf',
+        'css/fonts/icomoon.woff',        
     ];
     public $js = [
     ];

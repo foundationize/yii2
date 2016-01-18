@@ -66,6 +66,7 @@ footer {
     color: #ccc;
     background-color: #333;
     padding: 2em;
+    margin-top: 2rem;
 }
 
 footer a {
@@ -77,7 +78,6 @@ footer hr.footer-divider {
     border-color: #999999;
 }
 
-/*footer #social-list {
-    width: 50%;
-    margin: 0 auto;
-}*/
+footer #footer-social-company i {
+    font-size: 1.5rem;
+}
