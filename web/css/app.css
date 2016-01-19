@@ -2,10 +2,6 @@
 CSS app styles
 */
 
-/*form small {
-    margin-top: -0.5rem;
-}*/
-
 /* https://css-tricks.com/box-sizing/ */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -15,9 +11,9 @@ ul {
     list-style: outside none none;
 }
 
-[type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"], [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
+/*[type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"], [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
     margin-bottom: 0.5rem;
-}
+}*/
     
 p.help-text {
     margin-top: 0.5rem;
@@ -27,6 +23,12 @@ p.help-text {
 /* Error & Success Styles */
 label.error, .error-box.error {
     color: #ec5840;
+/*    margin-top: -0.5rem;*/    
+}
+
+form small {
+    position: relative;
+    top: -0.5rem;
 }
 
 input.error:not(:focus) {
