@@ -50,12 +50,5 @@
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
         }
-    },
-    
-    "repositories": [
-        {            
-            "type": "vcs",
-            "url": "https://github.com/foundationize/yii2-foundation.git"           
-        }
-    ] 
+    }
 }
