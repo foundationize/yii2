@@ -66,11 +66,11 @@ $config = [
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        'allowedIPs' => [$_SERVER['REMOTE_ADDR']], // always allow on current server
-    ];
+//    $config['bootstrap'][] = 'debug';
+//    $config['modules']['debug'] = [
+//        'class' => 'yii\debug\Module',
+//        'allowedIPs' => [$_SERVER['REMOTE_ADDR']], // always allow on current server
+//    ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
