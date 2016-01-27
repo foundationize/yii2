@@ -97,9 +97,9 @@ AppAsset::register($this);
             <div class="columns large-3 medium-3">
                 <h4>Footer nav area 1</h4>
                 <ul>
-                    <li><a href="/">Nav link 1</a></li>
-                    <li><a href="/">Nav link 2</a></li>
-                    <li><a href="/">Nav link 3</a></li>
+                    <li><a href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
+                    <li><a href="/contact">Contact us</a></li>                    
+<!--                    <li><a href="/">Nav link 3</a></li>-->
                 </ul>
             </div>
                 
@@ -134,10 +134,10 @@ AppAsset::register($this);
         
         <hr class="footer-divider">
         
-        <div class="row" id="footer-social-company">                       
+        <div class="row">                       
             <div class="columns large-4 medium-4 large-centered small-centered">
                 
-                <div class="row">
+                <div class="row" id="social">
                     <div class="columns large-3 medium-3">
                         <a class="facebook" target="_blank" href="https://facebook.com/foundationize">
                             <i class="icon-facebook"> </i> 
@@ -162,19 +162,26 @@ AppAsset::register($this);
                 
                 <br>
                 
-                <div class="row">
+                <div class="row" id="company">
                     <div class="columns large-12">
-                        <span id="company">© My Company</span>
+                        <span>© My Company</span>
                     </div>
                 </div>
-                                
+                                   
+                
             </div>
         </div>                 
+        
+        <div class="row" id="madewith">
+            <div class="columns large-12 text-right">
+                <span><a title="Foundationize" href="http://foundationize.com">Foundationized with <i class="icon-heart"> </i></a></span>
+            </div>
+        </div>
         
     </footer>  
     
     
-<?php $this->endBody() ?>
+    <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>

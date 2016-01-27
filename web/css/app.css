@@ -80,6 +80,11 @@ footer hr.footer-divider {
     border-color: #999999;
 }
 
-footer #footer-social-company i {
+footer #social i {
     font-size: 1.5rem;
+}
+
+footer #madewith {
+    font-size: 0.75rem;
+    color: #999999;
 }
