@@ -78,19 +78,13 @@ class ContactForm extends Model
      */
     public function contact($email)
     {
-        //if ($this->validate()) {
-//            Yii::$app->mailer->compose()
-//                ->setTo($email)
-//                ->setFrom([$this->email => $this->name])
-//                ->setSubject($this->subject)
-//                ->setTextBody($this->body)
-//                ->send();
-//
-//            return true;
-            
-            return Utils::sendMail($this->subject, $this->body, '{admin}', $this->name, $this->email);
-            
-//        }
-//        return false;
+        $subject = Yii::getAlias('@site_name') . ' contact received: ' . $this->subject;
+        
+        // Append the from name + email to the body:
+        $message = $this->body .
+                "\r\n \r\n" . 
+                "Sent by: {$this->name}<{$this->email}>";                
+        
+        return Utils::sendMail($subject, $message, '{admin}', $this->name, $this->email);
     }
 }
