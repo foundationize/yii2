@@ -182,6 +182,17 @@ AppAsset::register($this);
     
     
     <?php $this->endBody() ?>
+    
+    <?php
+    // Google Anlaytics: 
+    // Replace the below with your own Analytics / tracking JS
+    if (!YII_ENV_DEV && !YII_ENV_TEST) {
+        \app\models\Utils::showPre("DBG: This is live");
+    } else {
+        \app\models\Utils::showPre("DBG: server_name=" . $_SERVER["SERVER_NAME"]);
+    }
+    ?>
+    
 </body>
 </html>
 <?php $this->endPage() ?>

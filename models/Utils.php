@@ -8,7 +8,8 @@ use Yii;
 
 class Utils {
     
-    public static function arr_to_string($arr) {
+    public static function arr_to_string($arr) 
+    {
         if (true) { //is_object($arr)
             ob_start();
             var_dump($arr);
@@ -19,6 +20,12 @@ class Utils {
             return $arr;
         }
         return '';
+    }
+    
+    public static function showPre($str) 
+    {
+        echo "-------------------------------------";
+        echo "<pre>$str</pre>";    
     }
     
     public static function getCurrentURL() 
