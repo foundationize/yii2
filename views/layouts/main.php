@@ -186,8 +186,8 @@ AppAsset::register($this);
     <?php
     // Google Anlaytics: 
     // Replace the below with your own Analytics / tracking JS
-    if (!YII_ENV_DEV && !YII_ENV_TEST) {
-        \app\models\Utils::showPre("DBG: This is live");
+    if (!YII_ENV_DEV && !YII_ENV_TEST && strpos($_SERVER["SERVER_NAME"], 'yii2.foundationize.com') !== false) {
+        \app\models\Utils::showPre("DBG: Live server_name=" . $_SERVER["SERVER_NAME"]);
     } else {
         \app\models\Utils::showPre("DBG: server_name=" . $_SERVER["SERVER_NAME"]);
     }
