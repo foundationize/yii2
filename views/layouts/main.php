@@ -34,7 +34,8 @@ AppAsset::register($this);
     </head>
     
     <body>
-        <header class="hide-for-small-down">
+        
+<!--        <header class="show-for-medium">  shows for everything medium and larger 
             <div class="row full-width">
                 <div class="columns large-12 medium-12">
                                         
@@ -75,110 +76,228 @@ AppAsset::register($this);
                     
                   
                 </div>
-            </div>
-                       
+            </div>                      
                      
-        </header>
+        </header>-->
         
-        
-        <div id="content" class="row">
-            <div class="columns large-12">
+    <!-- OFF CANVAS: Pretty menu slide-in in Mobile/tablet view -->
+    <!-- http://zurb.com/building-blocks/top-bar-with-off-canvas -->
 
-                <?= $content ?>
+    <div class="off-canvas-wrapper">
+            
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            
+            <!-- off-canvas title bar for 'small' screen -->
+            <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="large">
+                
+                <div class="title-bar-left">
+                    <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
 
-            </div>
-        </div>
-        
-    
-    
-    <!-- here goes footer code -->
-    <footer class="text-center">
-        <div class="row" id="footer-nav">
-            <div class="columns large-3 medium-3">
-                <h4>Footer nav area 1</h4>
-                <ul>
-                    <li><a href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
-                    <li><a href="/contact">Contact us</a></li>                    
-<!--                    <li><a href="/">Nav link 3</a></li>-->
-                </ul>
-            </div>
-                
-            <div class="columns large-3 medium-3">
-                <h4>Footer nav area 1</h4>
-                <ul>
-                    <li><a href="/">Nav link 1</a></li>
-                    <li><a href="/">Nav link 2</a></li>
-                    <li><a href="/">Nav link 3</a></li>
-                </ul>
-            </div>
-            
-            <div class="columns large-3 medium-3">
-                <h4>Footer nav area 1</h4>
-                <ul>
-                    <li><a href="/">Nav link 1</a></li>
-                    <li><a href="/">Nav link 2</a></li>
-                    <li><a href="/">Nav link 3</a></li>
-                </ul>
-            </div>
-            
-            <div class="columns large-3 medium-3">
-                <h4>Footer nav area 1</h4>
-                <ul>
-                    <li><a href="/">Nav link 1</a></li>
-                    <li><a href="/">Nav link 2</a></li>
-                    <li><a href="/">Nav link 3</a></li>
-                </ul>
-            </div>
-            
-        </div>        
-        
-        <hr class="footer-divider">
-        
-        <div class="row">                       
-            <div class="columns large-4 medium-4 large-centered small-centered">
-                
-                <div class="row" id="social">
-                    <div class="columns large-3 medium-3">
-                        <a class="facebook" target="_blank" href="https://facebook.com/foundationize">
-                            <i class="icon-facebook"> </i> 
+                    <span class="title-bar-title">
+                        <a href="<?= Yii::$app->homeUrl; ?>">
+                             <?= Yii::getAlias('@site_name'); ?>
                         </a>
-                    </div>
-                    <div class="columns large-3 medium-3">
-                        <a class="twitter" target="_blank" href="https://twitter.com/foundationize">
-                            <i class="icon-twitter"> </i> 
-                        </a>
-                    </div>
-                    <div class="columns large-3 medium-3">
-                        <a class="google" target="_blank" href="https://plus.google.com/105150009262920559194">
-                            <i class="icon-google-plus"> </i>
-                        </a>
-                    </div>
-                    <div class="columns large-3 medium-3">
-                        <a class="linkedin" target="_blank" href="http://linkedin.com">
-                            <i class="icon-linkedin2"> </i>
-                        </a>
-                    </div>
+                    </span>
                 </div>
                 
-                <br>
+            </div>
+            
+            
+            <!-- off-canvas left menu -->
+
+            <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+
+              <ul class="vertical menu" data-drilldown>
+
+                <li>      
+                    <a href="#">One</a>
+                    <ul class="vertical menu">
+<!--                        <li class="back"><a href="#">Back</a></li>-->
+                        <li><a href="#one">1A</a></li>
+                        <li><a href="#two">1B</a></li>
+                        <li><a href="#three">1C</a></li>                                       
+                    </ul>
+                </li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="/contact">Contact</a></li>
+
+              </ul>
+
+            </div>
+            
+            
+            <!-- HEADER -->
+            <!-- "wider" top-bar menu for large only (medium uses off canvas) -->
+
+            <div id="widemenu" class="top-bar">
+
+              <div class="top-bar-left">
+
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li id="site-title" class="menu-text">
+                        <a href="<?= Yii::$app->homeUrl; ?>">
+                             <?= Yii::getAlias('@site_name'); ?>
+                        </a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#">One</a>
+                        <ul class="submenu menu vertical" data-submenu>
+                            <li><a href="#one">1A</a></li>
+                            <li><a href="#two">1B</a></li>
+                            <li><a href="#three">1C</a></li>                                       
+                        </ul>
+                    </li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+
+              </div>
+
+              <div class="top-bar-right">
+
+                <ul class="menu">
+
+                  <li><input type="search" placeholder="Search"></li>
+
+                  <li><button class="button">Search</button></li>
+
+                </ul>
+
+              </div>
+
+            </div>
+            
+            
+            
+            <!-- original content goes in this container -->
+
+            <div class="off-canvas-content" data-off-canvas-content>
                 
-                <div class="row" id="company">
+                <!-- START CONTENT -->
+                
+                
+                
+                
+                <div id="content" class="row">
                     <div class="columns large-12">
-                        <span>© My Company</span>
+
+                        <?= $content ?>
+
                     </div>
                 </div>
-                                   
+        
+    
+    
+                <!-- here goes footer code -->
+                <footer class="text-center">
+                    <div class="row" id="footer-nav">
+                        <div class="columns large-3 medium-3">
+                            <h4>Footer nav area 1</h4>
+                            <ul>
+                                <li><a href="<?= Yii::$app->homeUrl; ?>">Home</a></li>
+                                <li><a href="/contact">Contact us</a></li>                    
+            <!--                    <li><a href="/">Nav link 3</a></li>-->
+                            </ul>
+                        </div>
+
+                        <div class="columns large-3 medium-3">
+                            <h4>Footer nav area 1</h4>
+                            <ul>
+                                <li><a href="/">Nav link 1</a></li>
+                                <li><a href="/">Nav link 2</a></li>
+                                <li><a href="/">Nav link 3</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="columns large-3 medium-3">
+                            <h4>Footer nav area 1</h4>
+                            <ul>
+                                <li><a href="/">Nav link 1</a></li>
+                                <li><a href="/">Nav link 2</a></li>
+                                <li><a href="/">Nav link 3</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="columns large-3 medium-3">
+                            <h4>Footer nav area 1</h4>
+                            <ul>
+                                <li><a href="/">Nav link 1</a></li>
+                                <li><a href="/">Nav link 2</a></li>
+                                <li><a href="/">Nav link 3</a></li>
+                            </ul>
+                        </div>
+
+                    </div>        
+
+                    <hr class="footer-divider">
+
+                    <div class="row">                       
+                        <div class="columns large-4 medium-4 large-centered small-centered">
+
+                            <div class="row" id="social">
+                                <div class="columns large-3 medium-3">
+                                    <a class="facebook" target="_blank" href="https://facebook.com/foundationize">
+                                        <i class="icon-facebook"> </i> 
+                                    </a>
+                                </div>
+                                <div class="columns large-3 medium-3">
+                                    <a class="twitter" target="_blank" href="https://twitter.com/foundationize">
+                                        <i class="icon-twitter"> </i> 
+                                    </a>
+                                </div>
+                                <div class="columns large-3 medium-3">
+                                    <a class="google" target="_blank" href="https://plus.google.com/105150009262920559194">
+                                        <i class="icon-google-plus"> </i>
+                                    </a>
+                                </div>
+                                <div class="columns large-3 medium-3">
+                                    <a class="linkedin" target="_blank" href="http://linkedin.com">
+                                        <i class="icon-linkedin2"> </i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="row" id="company">
+                                <div class="columns large-12">
+                                    <span>© My Company</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>                 
+
+                    <div class="row" id="madewith">
+                        <div class="columns large-12 text-right">
+                            <span><a title="Foundationize" href="http://foundationize.com">Foundationized with <i class="icon-heart"> </i></a></span>
+                        </div>
+                    </div>
+
+                </footer>  
+                
+                
+                
+                
+                
+                <!-- END OFF CANVAS CONTENT -->
                 
             </div>
-        </div>                 
+            
+            
+            
+        </div><!-- end class=off-canvas-wrapper-inner -->            
+            
+    </div><!-- end class=off-canvas-wrapper -->
         
-        <div class="row" id="madewith">
-            <div class="columns large-12 text-right">
-                <span><a title="Foundationize" href="http://foundationize.com">Foundationized with <i class="icon-heart"> </i></a></span>
-            </div>
-        </div>
         
-    </footer>  
+        
+        
+        
     
     
     <?php $this->endBody() ?>

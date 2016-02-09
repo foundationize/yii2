@@ -45,19 +45,19 @@ header .columns {
     padding: 0;
 }
 
-#example-menu {
+#widemenu {
     background-color: #333;
 }
 
-#example-menu.top-bar a {
+#widemenu.top-bar a {
     color: #fff;
 }
 
-#example-menu .top-bar-left ul, #example-menu .top-bar-right ul {
+#widemenu .top-bar-left ul, #widemenu .top-bar-right ul {
     background-color: #333;
 }
 
-#example-menu #site-title {
+#widemenu #site-title {
     color: #fff;
 }
 

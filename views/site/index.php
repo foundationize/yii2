@@ -14,7 +14,7 @@ $this->title = Yii::getAlias('@site_name') . ' | ' . Yii::getAlias('@site_taglin
             
             <p>To get started with your own foundationized Yii2 project, please see the <a href="http://foundationize.com/#yii2">Yii2 + Foundation installation instructions</a>.</p>
 
-            <p>No need to install and configure extensions, this version of Yii2 is pre-configured and ready to roll with Foundation.</p>
+            <p>No need to install and configure extensions, this version of Yii2 is pre-configured and ready to roll with Foundation 6.</p>
         </div>
         
         <div class="callout large">
