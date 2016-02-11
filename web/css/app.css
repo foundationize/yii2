@@ -61,6 +61,38 @@ header .columns {
     color: #fff;
 }
 
+#share {
+    margin-right: 0.7em;
+}
+
+#share .jssocials-share {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#share .jssocials-share-link {
+    padding: 0.3em 0.5em;
+    font-size: 0.88em;
+}
+
+/* js-socials additional styling for added shares */
+#share .jssocials-share-twitter-tweet .jssocials-share-link {
+    background: #00aced none repeat scroll 0 0;
+    //font-size: 2.0rem;
+}
+
+/* give the G+ and +1 a little more room between each other */
+#share .jssocials-share-googleplus .jssocials-share-link .jssocials-share-label {
+    margin-left: 0.2em;
+}
+
+#share .jssocials-share-facebook-like .jssocials-share-link {
+    background: #3b5998 none repeat scroll 0 0;
+}
+
+/*#share a i.jssocials-share-logo, #share a .jssocials-share-label {    
+    font-size: 0.75em;
+}*/
 
 /*** Footer ***/
 

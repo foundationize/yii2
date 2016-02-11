@@ -34,52 +34,8 @@ AppAsset::register($this);
     </head>
     
     <body>
-        
-<!--        <header class="show-for-medium">  shows for everything medium and larger 
-            <div class="row full-width">
-                <div class="columns large-12 medium-12">
-                                        
-                   <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-                       <button class="menu-icon" type="button" data-toggle></button>
-                       <div class="title-bar-title"><?= Yii::getAlias('@site_name'); ?></div>
-                   </div>
-
-                   <div class="top-bar" id="example-menu">
-                       <div class="top-bar-left">
-                           <ul class="dropdown menu" data-dropdown-menu>
-                               <li id="site-title" class="menu-text">
-                                   <a href="<?= Yii::$app->homeUrl; ?>">
-                                        <?= Yii::getAlias('@site_name'); ?>
-                                   </a>
-                               </li>
-                               
-                               <li class="has-submenu">
-                                   <a href="#">One</a>
-                                   <ul class="submenu menu vertical" data-submenu>
-                                       <li><a href="#one">One</a></li>
-                                       <li><a href="#two">Two</a></li>
-                                       <li><a href="#three">Three</a></li>                                       
-                                   </ul>
-                               </li>
-                               <li><a href="#">Two</a></li>
-                               <li><a href="#">Three</a></li>
-                               <li><a href="/contact">Contact</a></li>
-                           </ul>
-                       </div>
-                       <div class="top-bar-right">
-                           <ul class="menu">
-                               <li><input type="search" placeholder="Search"></li>
-                               <li><button type="button" class="button">Search</button></li>
-                           </ul>
-                       </div>
-                   </div>
-                    
-                  
-                </div>
-            </div>                      
-                     
-        </header>-->
-        
+       
+       
     <!-- OFF CANVAS: Pretty menu slide-in in Mobile/tablet view -->
     <!-- http://zurb.com/building-blocks/top-bar-with-off-canvas -->
 
@@ -159,10 +115,14 @@ AppAsset::register($this);
               <div class="top-bar-right">
 
                 <ul class="menu">
+                    <li><div id="share"></div></li>                                
+                                
+                    <li>&nbsp;</li> 
+                    
+                    
+                    <li><input type="search" placeholder="Search"></li>
 
-                  <li><input type="search" placeholder="Search"></li>
-
-                  <li><button class="button">Search</button></li>
+                    <li><button class="button">Search</button></li>
 
                 </ul>
 

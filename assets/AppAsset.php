@@ -25,12 +25,14 @@ class AppAsset extends AssetBundle
         'css/fonts/icomoon.svg',
         'css/fonts/icomoon.ttf',
         'css/fonts/icomoon.woff',        
-    ];
+    ];    
     public $js = [
-    ];
+        'js/app.js',
+    ];    
     public $depends = [
         'yii\web\YiiAsset',
-        'foundationize\foundation\FoundationAsset', // in with the new        
+        'foundationize\foundation\FoundationAsset', 
+        'app\assets\JsSocialAsset'
     ];
 //    public $jsOptions = array(
 //        'position' => \yii\web\View::POS_HEAD
