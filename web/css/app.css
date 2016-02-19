@@ -65,12 +65,17 @@ header .columns {
     margin-right: 0.7em;
 }
 
+#share .jssocials-shares { 
+    margin: 0;
+}
+
 #share .jssocials-share {
     margin-top: 0;
     margin-bottom: 0;
 }
 
 #share .jssocials-share-link {
+    margin-top: 0.5em;
     padding: 0.3em 0.5em;
     font-size: 0.88em;
 }
