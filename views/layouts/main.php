@@ -22,6 +22,9 @@ AppAsset::register($this);
         <?= Html::csrfMetaTags() ?>                
         <?php 
         $title = '';
+        
+        // on each page (view), title is set for example:
+        // $this->title = Yii::getAlias('@site_name') . ' | ' . Yii::getAlias('@site_tagline');
         if (app\models\Utils::isHome()) {
             $title = $this->title . ' - foundationize.com';
         } else {
@@ -128,7 +131,7 @@ AppAsset::register($this);
 
               </div>
 
-            </div>
+            </div><!-- end div.id=wide-menu -->
             
             
             
@@ -246,7 +249,7 @@ AppAsset::register($this);
                 
                 <!-- END OFF CANVAS CONTENT -->
                 
-            </div>
+            </div><!-- end class=off-canvas-content -->  
             
             
             
